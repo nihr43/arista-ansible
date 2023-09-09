@@ -1,0 +1,8 @@
+---
+
+switches:
+  hosts:
+    172.30.184.98
+  vars:
+    reserved_ports: [et48]
+    nameserver: 8.8.8.8

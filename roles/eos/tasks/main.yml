@@ -1,0 +1,23 @@
+---
+- name: declare interfaces list
+  ansible.builtin.set_fact:
+    interfaces: []
+
+- name: detect switchports
+  ansible.builtin.set_fact:
+    interfaces: "{{ interfaces + [item] }}"
+  loop: "{{ ansible_interfaces }}"
+  when: item not in reserved_ports and item|regex_search("^et")
+
+- name: land startup-config
+  ansible.builtin.template:
+    src: startup-config
+    dest: /mnt/flash/startup-config
+    mode: 0770
+    owner: root
+    group: eosadmin
+  register: startupconfig
+
+- name: reboot
+  reboot:
+  when: startupconfig.changed

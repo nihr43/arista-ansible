@@ -1,0 +1,129 @@
+! Startup-config last modified at  Sat Sep  9 02:51:05 2023 by admin
+! device: localhost (DCS-7048T-A, EOS-4.15.10M)
+!
+! boot system flash:EOS-4.15.10M.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+ip name-server vrf default {{nameserver}}
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+environment fan-speed override 30
+!
+interface Ethernet1
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet13
+!
+interface Ethernet14
+!
+interface Ethernet15
+!
+interface Ethernet16
+!
+interface Ethernet17
+!
+interface Ethernet18
+!
+interface Ethernet19
+!
+interface Ethernet20
+!
+interface Ethernet21
+!
+interface Ethernet22
+!
+interface Ethernet23
+!
+interface Ethernet24
+!
+interface Ethernet25
+!
+interface Ethernet26
+!
+interface Ethernet27
+!
+interface Ethernet28
+!
+interface Ethernet29
+!
+interface Ethernet30
+!
+interface Ethernet31
+!
+interface Ethernet32
+!
+interface Ethernet33
+!
+interface Ethernet34
+!
+interface Ethernet35
+!
+interface Ethernet36
+!
+interface Ethernet37
+!
+interface Ethernet38
+!
+interface Ethernet39
+!
+interface Ethernet40
+!
+interface Ethernet41
+!
+interface Ethernet42
+!
+interface Ethernet43
+!
+interface Ethernet44
+!
+interface Ethernet45
+!
+interface Ethernet46
+!
+interface Ethernet47
+!
+interface Ethernet48
+   no switchport
+   ip address 172.30.184.98/27
+!
+interface Ethernet49
+!
+interface Ethernet50
+!
+interface Ethernet51
+!
+interface Ethernet52
+!
+interface Management1
+!
+ip route 0.0.0.0/0 172.30.184.97
+!
+no ip routing
+!
+!
+end
