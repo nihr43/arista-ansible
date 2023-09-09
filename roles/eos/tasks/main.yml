@@ -16,8 +16,4 @@
     mode: 0770
     owner: root
     group: eosadmin
-  register: startupconfig
-
-- name: reboot
-  reboot:
-  when: startupconfig.changed
+  notify: copy start run
