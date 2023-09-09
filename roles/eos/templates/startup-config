@@ -9,6 +9,8 @@ ip name-server vrf default {{nameserver}}
 !
 spanning-tree mode mstp
 !
+no lldp run
+!
 no aaa root
 !
 environment fan-speed override 30
