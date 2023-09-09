@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir -p /root/.ssh
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDP8ugbhqJMmQtNSQPyOGeWWuVc4FJ7P8+nAKpKmnb0vTtO4OTBng6rytPDchlCG52mTpf/Qqib3XOUXCo79OvzTxH9JCrfCh/VHunv7THbilbLd0ZJEBH/lKGiCRqt3Dm3xNRFJNtbzypLa3vt4g0bfUngMTtE+9CgpTTmrcSbtfy9r7Lzt2ydimw7epVOl4inixAsOKi1WG90Sqgv0R4AofcgyvGveSfh8lXdBE2SS6MoSFSDy+HZE/XU/fuh7ML3QVPm1RnPyQs6Q6KCIS+PD2j9a5/2PgCDqBXF2aSdM3c/8UywzyjUputOkmxMR+8SDzU2sdCDWF38MrhVG3218gTViMT7ydCfEN/nh5wWjLK7lJZWBprP59CzDjFjNZJwPSjDASxBfGP4VTlWlscg6pkgy5tBInHWdA3tYCLR7szWFt9lZOQTKDGl6pAbFL54W/1JnG7IpW3FcWfmv31f5MW8wP89DR6kuitBzz+VTrr5Qf4lITeZQiCVSmArqNU=' > /root/.ssh/authorized_keys
+echo '{{public_key}}' > /root/.ssh/authorized_keys
 
 echo '[fedora]
 name=Fedora 14
