@@ -2,7 +2,7 @@
 
 This project presents a proof-of-concept for deploying declarative `startup-config` templates on Arista EOS datacenter switches.
 
-This differs from the Ansible Network [Arista.Eos Collection](https://docs.ansible.com/ansible/latest/collections/arista/eos/index.html) in that we are not using imperative tasks to modify running config, merge configs, run cli commands, etc - we are simply landing the entire startup-config as a template and reloading it, with no guesswork.
+This differs from the Ansible Network [Arista.Eos Collection](https://docs.ansible.com/ansible/latest/collections/arista/eos/index.html) in that we are not using imperative tasks to modify running config, merge ('replace'? 'override'?) configs, run cli commands, etc - we are simply landing the entire startup-config as a template and reloading it; no guesswork.  In the long term, this will prove be more sustainable and scalable.
 
 ---
 
