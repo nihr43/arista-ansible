@@ -19,6 +19,8 @@ interface Ethernet48
    ip address 172.30.184.98/27
    end
 ip route 0.0.0.0/0 172.30.184.97
+copy run start
+end
 ```
 
 Now we can enter bash, and create the magic `/mnt/flash/rc.eos` script to land an ssh key on the ephemeral root filesystem at boot:
@@ -33,9 +35,7 @@ mkdir -p /root/.ssh
 echo 'ssh-rsa keyyyy' > /root/.ssh/authorized_keys
 ```
 
-You should now be able to ssh root@ .
-
-With ssh set-up, we can run `ansible-playbook main.yml --diff`:
+You should now be able to ssh root@switch, and with ssh setup, we can run `ansible-playbook main.yml --diff`.  Keep in mind, your specific configuration is relevant during this bootstrapping phase.  You may or may not want to override the configuration we just did to ssh in the first place.
 
 ```
 ~/git/arista-ansible$ ansible-playbook main.yml --diff
