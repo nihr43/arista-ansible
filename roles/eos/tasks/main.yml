@@ -17,3 +17,9 @@
     owner: root
     group: eosadmin
   notify: copy start run
+
+- name: land init script
+  ansible.builtin.template:
+    src: rc.eos
+    dest: /mnt/flash/rc.eos
+    mode: 0770
